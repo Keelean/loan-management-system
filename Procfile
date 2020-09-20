@@ -1,0 +1,1 @@
+web: java -jar target/FFMLoanApp-0.0.1-SNAPSHOT.jar

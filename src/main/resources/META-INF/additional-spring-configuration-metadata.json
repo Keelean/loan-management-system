@@ -1,0 +1,41 @@
+{"properties": [
+  {
+    "name": "file.upload.path",
+    "type": "java.lang.String",
+    "description": "Sets directory for uploading customer records"
+  },
+  {
+    "name": "file.upload.report.path",
+    "type": "java.lang.String",
+    "description": "Sets the directory for reports"
+  },
+  {
+    "name": "file.upload.path.url",
+    "type": "java.lang.String",
+    "description": "Sets the url for downloading uploaded files"
+  }
+  ,
+  {
+    "name": "file.upload.url.protocol",
+    "type": "java.lang.String",
+    "description": "This sets the prefix to 'file.upload.path.url'"
+  }
+  ,
+  {
+    "name": "file.upload.customer.doc",
+    "type": "java.lang.String",
+    "description": "Sets the directory for uploading customer documents"
+  }
+    ,
+  {
+    "name": "jwt.secret",
+    "type": "java.lang.String",
+    "description": "Sets the javaScript web token secret"
+  }
+    ,
+  {
+    "name": "jwt.expiration",
+    "type": "java.lang.String",
+    "description": "Sets the javaScript web token expiry date"
+  }
+]}

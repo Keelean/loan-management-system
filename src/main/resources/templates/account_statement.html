@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Account Statement</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>DATE</th>
+			<th>DOC. NO</th>
+			<th>NARRATION</th>
+			<th>DEBIT</th>
+			<th>CREDIT</th>
+			<th>BALANCE</th>
+		</tr>
+		<tr th:each="datum: ${data}">
+			<td th:text="${#temporals.format(datum.paidDate, 'dd-MM-yyyy')}">Date</td>
+			<td th:text="${datum.documentNumber}">Documnet Number</td>
+			<td th:text="${datum.narration}">Narration</td>
+			<td th:text="${#numbers.formatDecimal(datum.debit, 1,'COMMA', 2, 'POINT')}">Debit</td>
+			<td th:text="${#numbers.formatDecimal(datum.credit, 1, 'COMMA', 2, 'POINT')}">Credit</td>
+			<td th:text="${#numbers.formatDecimal(datum.balance, 1, 'COMMA', 2, 'POINT')}">Balance</td>
+		</tr>
+		<!--<tr>
+			<th>CUMMULATIVE TOTALS</th>
+			<th></th>
+			<th></th>
+			<th th:text="${#numbers.formatDecimal(summary.totalDebit, 1, 'COMMA', 2, 'POINT')}">Total Debit</th>
+			<th th:text="${#numbers.formatDecimal(summary.totalCredit, 1, 'COMMA', 2, 'POINT')}">Total Credit</th>
+			<th th:text="${#numbers.formatDecimal(summary.totalBalance, 1, 'COMMA', 2, 'POINT')}">Total Balance</th>
+		</tr>-->
+	</table>
+</body>
+</html>
